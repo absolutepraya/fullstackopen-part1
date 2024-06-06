@@ -59,7 +59,4 @@ const App = () => {
     );
 };
 
-// PropType definitions
-
-
 export default App;
