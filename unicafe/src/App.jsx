@@ -10,7 +10,10 @@ const Button = (props) => {
 // StatisticLine component
 const StatisticLine = (props) => {
 	return (
-		<p>{props.text} {props.value}</p>
+		<tr>
+			<td>{props.text}</td>
+			<td>{props.value}</td>
+		</tr>
 	)
 }
 
@@ -37,12 +40,16 @@ const Statictics = (props) => {
 	return (
 		<div>
 			<h1>statistics</h1>
-			<StatisticLine text="good" value={good} />
-			<StatisticLine text="neutral" value={neutral} />
-			<StatisticLine text="bad" value={bad} />
-			<StatisticLine text="all" value={all} />
-			<StatisticLine text="average" value={average.toFixed(3)} />
-			<StatisticLine text="positive" value={positive.toFixed(3) + '%'} />
+			<table>
+				<tbody>
+					<StatisticLine text="good" value={good} />
+					<StatisticLine text="neutral" value={neutral} />
+					<StatisticLine text="bad" value={bad} />
+					<StatisticLine text="all" value={all} />
+					<StatisticLine text="average" value={average.toFixed(1)} />
+					<StatisticLine text="positive" value={positive.toFixed(1) + " %"} />
+				</tbody>
+			</table>
 		</div>
 	)
 }
